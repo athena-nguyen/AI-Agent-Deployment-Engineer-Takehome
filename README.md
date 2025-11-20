@@ -96,3 +96,6 @@ We have taken in feedback for the story! Here is a new and improved story based 
 Once upon a time, on a rainy afternoon, Toriel the gentle goat mother and Frisk the curious human child found themselves cozied up in their quaint home. Toriel, who had lovingly taken Frisk under her care, was determined to show the child the warmth of a true home. Despite Frisk's initial hesitance, Toriel's kind gestures slowly began to melt away the walls around the child's heart.
 
 As the raindrops danced against the window panes, Toriel decided to whip up a batch of Frisk's favorite butterscotch pie. The sweet scent wafted through the air, drawing Frisk closer to the kitchen with eager anticipation. With a steaming slice of pie in hand, Toriel and Frisk settled by the crackling fireplace, their laughter filling the room. In that moment, Frisk felt a sense of belonging and love that transcended mere words. And Toriel, with a knowing smile, understood that true bonds are nurtured with patience and care, just like a pie that bakes slowly to perfection. And so, as the rain continued to pour outside, their hearts grew closer with each shared moment, creating a home filled with love and warmth.
+
+# Block Diagram
+![image alt](https://github.com/athena-nguyen/AI-Agent-Deployment-Engineer-Takehome/blob/latest_branch/Block%20Diagram.png?raw=true)
