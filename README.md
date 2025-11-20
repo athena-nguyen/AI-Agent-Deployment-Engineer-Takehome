@@ -24,7 +24,7 @@ It features a **storytelling agent**, a **judge agent**, and a **refinement agen
 
 ---
 
-## Architecture Overview
+## 🧱 Architecture Overview
 User Input → Category Agent → Storyteller Agent → Judge (LLM/User) → Refinement Agent → Final Output
 - Category Agent: Determines story category.
 
