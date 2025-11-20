@@ -5,19 +5,21 @@ from openai import OpenAI
 """
 Before submitting the assignment, describe here in a few sentences what you would have built next if you spent 2 more hours on this project:
 
+I would like to implement a way to have the user to continue refining the story until they are satisfied. 
+I would also like to implement more refined prompts for generating the story. For refined prompts I would've loved to talk to real children book authors to better understand what makes a children's story good.
+Also if I had more time I would like to have implemented some fun illustrations to accompany the stories.
+
 """
 
 # ---------------------------------------------------------
 # Base model call — DO NOT CHANGE THE MODEL (assignment rule)
 # ---------------------------------------------------------
 def call_model(prompt: str, max_tokens=3000, temperature=0.1) -> str:
-    OPENAI_API_KEY = "Add key"
+    OPENAI_API_KEY = "Add key here"
     client = OpenAI(
     # This is the default and can be omitted
         api_key=os.getenv(OPENAI_API_KEY)
     )
-
-    # openai.api_key = os.getenv(OPENAI_API_KEY) # please use your own openai api key here.
     resp = client.chat.completions.create(
         model="gpt-3.5-turbo",
         messages=[{"role": "user", "content": prompt}],
@@ -155,7 +157,7 @@ def refinement_agent(original_story: str, feedback: dict) -> str:
         - emotions
         - structure
         - age-appropriate language
-        - engagment
+        - character development
 
         Keep it appropriate for ages 5 to 10.
         Preserve the main idea but improve overall quality.
@@ -215,4 +217,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
