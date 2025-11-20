@@ -11,7 +11,7 @@ Before submitting the assignment, describe here in a few sentences what you woul
 # Base model call — DO NOT CHANGE THE MODEL (assignment rule)
 # ---------------------------------------------------------
 def call_model(prompt: str, max_tokens=3000, temperature=0.1) -> str:
-    OPENAI_API_KEY = ""
+    OPENAI_API_KEY = "Add key"
     client = OpenAI(
     # This is the default and can be omitted
         api_key=os.getenv(OPENAI_API_KEY)
