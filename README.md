@@ -24,60 +24,15 @@ It features a **storytelling agent**, a **judge agent**, and a **refinement agen
 
 ---
 
-## Block Diagram
+## Architecture Overview
+User Input → Category Agent → Storyteller Agent → Judge (LLM/User) → Refinement Agent → Final Output
+- Category Agent: Determines story category.
 
-┌───────────────────────────┐
-│        User Input         │
-│  - Story request          │
-│  - Category (optional)    │
-└─────────────┬─────────────┘
-              │
-              ▼
-┌───────────────────────────┐
-│   Category Agent          │
-│ - If user provides, use it│
-│ - If auto, LLM classifies │
-└─────────────┬─────────────┘
-              │
-              ▼
-┌───────────────────────────┐
-│   Storyteller Agent       │
-│ - Generates initial story │ │
-└─────────────┬─────────────┘
-              │
-              ▼
-┌───────────────────────────┐
-│    Judge Selection        │
-│ - LLM Judge               │
-│ - User Judge              │
-└─────────────┬─────────────┘
-              │
-   ┌──────────┴──────────┐
-   │                     │
-   ▼                     ▼
-┌───────────────┐   ┌───────────────┐
-│  LLM Judge    │   │  User Judge   │
-│ - JSON score  │   │ - Manual score│
-│ - Critique    │   │ - Critique    │
-│ - Improvements│   │ - Improvements│
-└──────┬────────┘   └──────┬────────┘
-       │                   │
-       └──────────┬────────┘
-                  ▼
-       ┌─────────────────────┐
-       │ Refinement Agent    │
-       │ - Uses feedback     │
-       │   (LLM or user)     │
-       │ - Produces improved │
-       │   story             │
-       └─────────┬───────────┘
-                 │
-                 ▼
-        ┌──────────────────┐
-        │ Final Output     │
-        │ - Improved story │
-        │ - Feedback info  │
-        └──────────────────┘
+- Storyteller Agent: Generates story text.
+
+- Judge Agent: Scores, critiques, and provides improvement suggestions.
+
+- Refinement Agent: Rewrites story using feedback for better clarity, imagination, and structure.
 
 ---
 
